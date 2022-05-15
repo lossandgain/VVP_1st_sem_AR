@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int a, b, s, p, mid, summ1, razn1, proizv1, del1, summ2, razn2, proizv2, del2, D, L;
+	s = 0;
+	p = 0;
+	mid = 0;
+	summ1 = 0;
+	razn1 = 0;
+	proizv1 = 0;
+	del1 = 0;
+	summ2 = 0;
+	razn2 = 0;
+	proizv2 = 0;
+	del2 = 0;
+	L = 0;
+	cout << "Введите значения а, b и d" << endl;
+	cin >> a >> b >> D;
+	p = 2 * (a + b);
+	s = a * b;
+	mid = (a + b) / 2;
+	L = D * 3.14;
+	cout << "Периметр равен " << p << endl;
+	cout << "Площадь равна " << s << endl;
+	cout << "Среднее арифмет. равно " << mid << endl;
+	cout << "длина окружности равна " << L << endl;
+	cout << "\n";
+
+	
+		if (a == 0 || b == 0)
+		{
+			cout << "Значения a и b не могут равняться 0" << endl;
+		}
+		else
+		{
+			summ1 = pow(a, 2) + pow(b, 2);
+			razn1 = pow(a, 2) - pow(b, 2);
+			proizv1 = pow(a, 2) * pow(b, 2);
+			del1 = pow(a, 2) / pow(b, 2);
+			cout << "Сумма квадратов = " << summ1 << endl;
+			cout << "Разность квадратов = " << razn1 << endl;
+			cout << "ПРоизведение квадратов = " << proizv1 << endl;
+			cout << "Частное квадратов = " << del1 << endl;
+			cout << "\n";
+			summ2 = abs(summ2);
+			razn2 = abs(razn2);
+			proizv2 = abs(proizv2);
+			del2 = abs(del2);
+			summ2 = pow(a, 2) + pow(b, 2);
+			razn2 = pow(a, 2) - pow(b, 2);
+			proizv2 = pow(a, 2) * pow(b, 2);
+			del2 = pow(a, 2) / pow(b, 2);
+			cout << "Сумма квадратов модулей = " << summ2 << endl;
+			cout << "Разность квадратов модулей = " << razn2 << endl;
+			cout << "ПРоизведение квадратов модулей = " << proizv2 << endl;
+			cout << "Частное квадратов модулей = " << del2 << endl;
+
+		}
+}
