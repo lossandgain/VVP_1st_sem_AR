@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int t;
+    printf("Отсчет начинается с 00:00.\n");
+    printf("Введите количество секунд ");
+    scanf("%d", &t);
+    
+    if(t >= 60)
+    {
+        while(t >= 60)
+        {
+            t -= 60;
+        }
+        printf("Введите секунды %d", t);
+    }
+    else
+    {
+        printf("Прошло 0 минут, подождите %d секунд до следующей минуты.\n", 60-t);
+    }
+    return 0;
+}
