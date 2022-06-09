@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int n, k, i = 0, j = 0;
+    printf("Введите число N > 1: ");
+    cin >> n;
+    if (n <= 1) {
+        printf("Неверное значение введенной переменной!");
+        return 0;
+    }
+    else {
+        while (i < n) {
+            j++;
+            i += j;
+            k = j;
+        }
+        printf("Данное число: %d, сумма чисел: %d, последнее - %d", n, i, k);
+        return 0;
+    }
+}
