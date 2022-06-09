@@ -1,1 +1,22 @@
+#include <iostream>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int A, B, C, k;
+
+	//A в B, B — в C, C — в A
+	//b = a, c = b, a = c
+
+	printf("Даны числа А, В и С. Поменяем их значения местами.\n");
+	scanf("%d %d %d", &A, &B, &C);
+
+	k = A;
+	A = C;
+	C = B;
+	B = k;
+
+	printf("%d %d %d", A, B, C);
+	return 0;
+}
 
