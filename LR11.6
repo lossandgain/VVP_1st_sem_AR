@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+   setlocale(LC_ALL, "ru");
+    int a;
+    string razryad;
+    string chet;
+    printf("Введите число А от 1 до 999: ");
+    scanf("%d", &a);
+    
+    if(a / 10 == 0){
+        razryad = "однозначное число.";
+    }
+    else if (a / 100 == 0){
+        razryad = "двузначное число.";
+    }
+    else if(a / 1000 == 0){
+        razryad = "трёхзначное число.";
+    }
+    if (a % 2 == 0){
+        chet = "Чётное";
+    }
+    else{
+        chet = "Нечётное";
+    }
+    printf("%s %s", chet, razryad);
+    return 0;
+}
