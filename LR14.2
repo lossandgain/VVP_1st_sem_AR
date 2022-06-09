@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int a, b, i, j;
+    printf("Введите два значения длин отрезков А и В: ");
+    cin >> a >> b;
+    if (a < b) {
+        printf("Неверные значения!");
+        return 0;
+    }
+    else {
+        while (a >= b) {
+            a = a - b;
+        }
+        printf("%d", a);
+        return 0;
+    }
+}
