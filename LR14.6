@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int Fib;
+    printf("Введите число: ");
+    cin >> Fib;
+    int i = 0, j = 1, g = 0, count = 2;
+    if (Fib > 1) {
+        for (; g < Fib; g = i + j) {
+            if (i > j) {
+                j = i;
+                i = g;
+            }
+            else if (j > i) {
+                i = j;
+                j = g;
+            }
+            else {
+                i = j;
+                j = g;
+            }
+            count++;
+        }
+        if (g == Fib) {
+            printf("Порядковый номер числа Фибоначчи равен: %d", count);
+        }
+        else {
+            printf("Не является числом Фибоначчи\n\n");
+        }
+    }
+}
