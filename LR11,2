@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+   setlocale(LC_ALL, "ru");
+    int N = 3;
+    int max1 = -898989899, max2 = -8989898, i, a[N], s;
+    printf("Введите 3 числа. Найдём сумму двух наибольших.\n");
+    for (i = 0; i < N; i++)
+    {
+        printf("a[%d] = ", i);
+        scanf("%d", &a[i]);
+    }
+    for (i = 0; i < N; i++){
+        if (a[i] > max1){
+            max2 = max1;
+            max1 = a[i];
+        }
+        else{
+            max2 = a[i];
+        }
+    }
+   s = max1 + max2;
+   printf("Сумма двух наибольших = %d.\n", s);
+   return 0;
+}
