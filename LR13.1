@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    float a, b, i;
+    i = 0.1;
+    cout << "Введите стоимость 1кг конфет: " << endl;
+    cin >> a;
+
+    while (i < 1.1) {
+        b = a * i;
+        printf("%g руб; ", b);
+        i = i + 0.1;
+    }
+}
