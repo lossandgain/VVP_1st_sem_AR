@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+
+    setlocale(LC_ALL, "ru");
+    float a, b, c, n, m, s;
+    int nc, n1 = 0, n2 = 0;
+    printf("Введите числа A, B, C: ");
+    scanf("%f %f %f", &a, &b, &c);
+    
+    n = a * b;
+    m = c * c;
+    
+    printf("Имеем прямоугольник с площадью %f и квадрат с площадью %f.\n", n, m);
+    
+    if(m > n)
+    {
+        printf("Введите данные еще раз\n");
+        return 0;
+    }
+    else
+    {
+        while (a >= c)
+        {
+            a = a - c;
+            n1++;
+        }
+        while (b >= c)
+        {
+            b = b - c;
+            n2++;
+        }
+        s = n - n1 * n2 * c * c;
+        nc = n1 * n2;
+        printf("Остаточная площадь s = %f, количество = %d.\n", s, nc);
+        return 0;
+    }
+}
