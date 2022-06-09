@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int a;
+    string zad;
+    cout << "Введите количество заданий от 10 до 40: " << endl;
+    cin >> a;
+    if ((a < 10) || (a > 40)) {
+        cout << "Неправильный диапазон!" << endl;
+        return 0;
+    }
+    else {
+        if (((a >= 10) && (a <= 20)) || ((a >= 25) && (a <= 30)) || ((a >= 35) && (a <= 40))) {
+            zad = "учебных заданий";
+        }
+        else if ((a == 21) || (a == 31)) {
+            zad = "учебное задание";
+        }
+        else if (((a >= 22) && (a <= 24)) || ((a >= 32) && (a <= 34))) {
+            zad = "учебных задания";
+        }
+        cout << a << " " << zad << endl;
+    }
+}
