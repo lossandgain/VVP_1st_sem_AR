@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+float rings(float R1, float R2) {
+    return (3.14 * pow(R1, 2)) - (3.14 * pow(R2, 2));
+}
+int main() {
+    setlocale(LC_ALL, "ru");
+    for (int x = 1; x <= 3; x++) {
+        float r1, r2;
+        printf("Введите радиус R1: ");
+        cin >> r1;
+        printf("Введите радиус R2: ");
+        cin >> r2;
+        if (r1 < r2) {
+            printf("Введите данные еще раз");
+            return 0;
+        }
+        else {
+            printf("S = %g\n", rings(r1, r2));
+            return 0;
+        }
+    }
+}
