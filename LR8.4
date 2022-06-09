@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int a, c, d, q;
+    printf("Введите число а: ");
+    scanf("%d", &a);
+    
+    if(a/100==0)
+    {
+        printf("Поменяем разряды числа а местами.\n");
+        c = a / 10;
+        d = a % 10;
+        q = 10*d + c;
+        
+        printf("Видоизменённое число а = %d.\n", q);
+        return 0;
+    }
+    else
+    {
+        printf("Прочтите условие и повторите\n");
+        return 0;
+    }
+}
