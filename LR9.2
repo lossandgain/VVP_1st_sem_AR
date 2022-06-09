@@ -1,0 +1,14 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int d, h;
+    printf("Введите день от 1 до 365.\n");
+    scanf("%d", &d);
+    h = d;
+    while(h > 7)
+    {
+        h -= 7;
+    }
