@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int n, i = 0;
+    printf("Введите целое число сомножителей: ");
+    cin >> n;
+    float c, sum;
+    if (n > 0) {
+        sum = 1;
+        c = 1;
+        for (int i = 0; i < n; i++) {
+            c += 0.1;
+            sum = sum * c;
+        }
+        printf("%g", sum);
+        return 0;
+    }
+    else {
+        printf("Error!");
+        return 0;
+    }
+}
