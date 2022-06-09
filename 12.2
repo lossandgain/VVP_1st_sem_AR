@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int dv;
+    string sv;
+    cout << "Введите начальную сторону света (N, W, S, E):" << endl;
+    cin >> sv;
+    cout << "0 — продолжать движение, 1 — поворот налево, -1 — поворот направо. Введите направление действие (0, 1 или -1):" << endl;
+    cin >> dv;
+
+    if (sv == "N") {
+        if (dv == 0) {
+            cout << "Также направлен на север";
+            return 0;
+        }
+        else if (dv == 1) {
+            cout << "Направлен на запад";
+        }
+        else if (dv == -1) {
+            cout << "Направлен на восток";
+        }
+    }
+    if (sv == "W") {
+        if (dv == 0) {
+            cout << "Также направлен на запад";
+        }
+        else if (dv == 1) {
+            cout << "Направлен на юг";
+        }
+        else if (dv == -1) {
+            cout << "Направлен на север";
+        }
+    }
+    if (sv == "S") {
+        if (dv == 0) {
+            cout << "Также направлен на юг";
+        }
+        else if (dv == 1) {
+            cout << "Направлен на восток";
+        }
+        else if (dv == -1) {
+            cout << "Направлен на запад";
+        }
+    }
+    if (sv == "E") {
+        if (dv == 0) {
+            cout << "Также направлен на восток";
+        }
+        else if (dv == 1) {
+            cout << "Направлен на север";
+        }
+        else if (dv == -1) {
+            cout << "Направлен на юг";
+        }
+    }
+    return 0;
+}
