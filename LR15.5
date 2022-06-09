@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int fact(int N)
+{
+    int a = 1;
+    if (N > 0)
+    {
+        if (N % 2 == 0)
+        {
+            for (int i = 2; i <= N; i += 2)
+            {
+                a *= i;
+            }
+        }
+        else
+        {
+            for (int i = 1; i <= N; i += 2)
+            {
+                a *= i;
+            }
+        }
+    }
+    else printf("error");
+    return a;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int b;
+    printf("Введите число для вычисления двойного факториала: ");
+    cin >> b;
+    printf("%d", fact(b));
+}
