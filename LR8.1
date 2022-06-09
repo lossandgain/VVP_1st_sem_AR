@@ -1,0 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    float a;
+    int b;
+    printf("Введите объём файла: ");
+    scanf("%f", &a);
+    printf("Дан файл а = %.0f байт.\n", a);
+    
+    b = ceilf(a / 1024);
+    printf("В файле а = %.0f байт - %d килобайт.\n", a, b);
+    return 0;
+}
