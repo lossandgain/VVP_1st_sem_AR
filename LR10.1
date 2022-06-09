@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    printf("Даны два числа А и В.\n");
+    printf("«Справедливы неравенства A > 2 и B ≤ 3».\n");
+    printf("Проверим на истинность выражение A > 2 и B ≤ 3.\n");
+    
+    int a, b;
+    printf("Число А: \n");
+    scanf("%d", &a);
+    printf("Число В: \n");
+    scanf("%d", &b);
+    
+    if ((a > 2) && (b <= 3))
+    {
+        printf("Высказывание верно.\n");
+        return 0;
+    }
+    else
+    {
+        printf("Высказывание неверно.\n");
+        return 0;
+    }
+}
