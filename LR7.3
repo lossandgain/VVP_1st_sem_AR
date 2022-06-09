@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    
+    int x, a, y;
+    float a1, s;
+    printf("Введите кол-во кг конфет, их стоимость и будущую докупку в кг.\n");
+    scanf("%d %d %d", &x, &a, &y);
+    printf("Вы купили %d кг конфет за %d рублей. Потом ещё %d кг по той же цене.\n", x, a, y);
+    
+    
+    a1 = a / x;
+    s = a1 * y;
+    
+    printf("1 кг = %.2f рублей.\n", a1);
+    printf("%d кг = %.2f рублей.\n", y, s);
+    return 0;
+}
