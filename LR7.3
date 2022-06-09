@@ -1,20 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <cmath>
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
+    int gr;
+    float pi = 3.14, rad;
+    setlocale(LC_ALL, "ru");
+    printf("Введите угол в градусах. Переведём его в радианы.\n");
+    printf("Угол в градусах: ");
+    scanf_s("%d", &gr);
     
-    int x, a, y;
-    float a1, s;
-    printf("Введите кол-во кг конфет, их стоимость и будущую докупку в кг.\n");
-    scanf("%d %d %d", &x, &a, &y);
-    printf("Вы купили %d кг конфет за %d рублей. Потом ещё %d кг по той же цене.\n", x, a, y);
+    if((gr > 0) && (gr < 360))
+    {
+        rad = gr * pi / 180;
+    }
+    else
+    {
+        while(gr >= 360)
+        {
+            gr = gr - 360;
+        }
+        rad = gr * pi / 180;
+    }
     
-    
-    a1 = a / x;
-    s = a1 * y;
-    
-    printf("1 кг = %.2f рублей.\n", a1);
-    printf("%d кг = %.2f рублей.\n", y, s);
+    printf("%d градусов = %f радианов.\n", gr, rad);
     return 0;
 }
