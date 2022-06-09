@@ -1,1 +1,36 @@
+#include <iostream>
+#include <cstdlib>
+
+int main()
+{
+	int a, b, c, ac, bc, k;
+	setlocale(LC_ALL, "ru");
+
+	printf("Даны точки А, В, С. Найдём произведение АС и ВС.\n");
+
+	printf("Введите координаты точки А: \n");
+	scanf("%d", &a);
+
+	printf("Введите координаты точки B: \n");
+	scanf("%d", &b);
+
+	printf("Введите координаты точки C: \n");
+	scanf("%d", &c);
+
+	if (((b>a)&&(c>a)&&(c<b)) || ((a>b)&&(c>b)&&(c<a)))
+	{
+		ac = abs(a - c);
+		bc = abs(c - b);
+
+		k = ac * bc;
+
+		printf("Произведение отрезков АС и ВС равно %d", k);
+		return 0;
+	}
+  
+	else
+	{
+		printf("Попробуйте еще раз\n");
+	}
+}
 
