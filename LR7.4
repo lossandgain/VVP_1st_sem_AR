@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int v1, v2, s, t, vv, ss;
+
+    printf("Введите скорость первого автомобиля, км/ч: \n");
+    scanf("%d", &v1);
+
+    printf("Введите скорость второго автомобиля, км/ч: \n");
+    scanf("%d", &v2);
+
+    printf("Введите расстояние между ними, км: \n");
+    scanf("%d", &s);
+
+    printf("Введите время в пути, ч: \n");
+    scanf("%d", &t);
+
+    vv = v1 + v2;
+    ss = s + vv * t;
+
+    printf("Проведя в пути %d часов, автомобили оказались на расстоянии %d км друг от друга.\n", t, ss);
+    return 0;
+}
