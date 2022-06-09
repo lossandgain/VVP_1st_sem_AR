@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int a, c, d, e, q;
+    printf("Введите число а: ");
+    scanf("%d", &a);
+    
+    if(a/1000==0)
+    {
+        printf("Произведём махинации с данным числом по условию задачи.\n");
+        c = a / 100; //1 порядок
+        d = (a - c*100) / 10; //2 порядок
+        e = a % 10; //3 порядок
+        q = 100*d + 10*e + c;
+        
+        printf("Видоизменённое число а = %d.\n", q);
+        return 0;
+    }
+    else
+    {
+        printf("Прочтите условие и повторите\n");
+        return 0;
+    }
+}
