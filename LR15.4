@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+void quarter(float x, float y) {
+    if ((x == 0) || (y == 0))
+        printf("Неверные координаты точки.");
+    else if ((x > 0) && (y > 0))
+        printf("первая четверть;\n");
+    else if ((x < 0) && (y > 0))
+        printf("вторая четверть;\n");
+    else if ((x < 0) && (y < 0))
+        printf("третья четверть;\n");
+    else if ((x > 0) && (y < 0))
+        printf("четвертая четверть;\n");
+}
+int main() {
+    setlocale(LC_ALL, "ru");
+    for (int i = 0; i <= 2; i++) {
+        float x, y;
+        printf("Введите координаты точки: ");
+        cin >> x >> y;
+        printf("Точка с координатами (%g, %g): ", x, y);
+        quarter(x, y);
+    }
+}
