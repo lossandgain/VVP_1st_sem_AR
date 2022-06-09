@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int n, i;
+    float a, sum;
+    printf("Введите целое число N: ");
+    cin >> n;
+    printf("Введите вещественное число A: ");
+    cin >> a;
+    if (n > 0) {
+        sum = 1;
+        for (int i = 1; i <= n; i++) {
+            sum += pow(-a, i);
+        }
+        printf("значение (1 - A + A^2 - A^3 + . . . +- A^n) равно %g", sum);
+    }
+    else
+        printf("Повторите ввод.\n");
+}
