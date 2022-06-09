@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int a, b, c;
+    printf("Введите значения а и в: ");
+    scanf("%d %d", &a, &b);
+    if ((a>0) && (b>0) && (a>b))
+    {
+        c = a / b;
+        printf("Количество вмещаемых отрезков = %d.\n", c);
+        return 0;
+    }
+    else
+    {
+        printf("Прочтите условие и повторите\n");
+        return 0;
+    }
+}
