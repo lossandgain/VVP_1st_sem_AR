@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    float x1, y1, x2, y2;
+    printf("Найдём расстояние между двумя точками на плоскости.\n");
+    
+    printf("Введите координаты первой точки.\n");
+    scanf("%f %f", &x1, &y1);
+    printf("Введите координаты второй точки.\n");
+    scanf("%f %f", &x2, &y2);
+    
+    float d, a;
+    a = pow((x2 - x1),2) + pow((y2 - y1),2);
+    d = sqrt(a);
+    
+    printf("Расстояние между точками равно %.1f.\n", d);
+    return 0;
+}
