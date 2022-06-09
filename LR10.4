@@ -1,0 +1,37 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    printf("Дано число А.\n");
+    printf("«Цифры данного числа образуют возрастающую или убывающую последовательность».\n");
+    printf("Проверим на истинность это выражение.\n");
+    
+    int a, c1, c2, c3;
+    
+    printf("Число А: \n");
+    scanf("%d", &a);
+    
+    c1 = a / 100;
+    c2 = (a - c1*100) / 10;
+    c3 = a % 10;
+    
+    printf("%d %d %d\n", c1, c2, c3);
+    
+    if ((c1 < c2) && (c2 < c3))
+    {
+        printf("Высказывание верно.\n");
+        return 0;
+    }
+    else if ((c1 > c2) && (c2 > c3))
+    {
+        printf("Высказывание верно.\n");
+        return 0;
+    }
+    else
+    {
+        printf("Высказывание неверно.\n");
+        return 0;
+    }
+}
