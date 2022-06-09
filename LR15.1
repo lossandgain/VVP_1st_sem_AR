@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+double Power(float a)
+{
+    float b;
+    b = pow(a, 3);
+    return b;
+}
+int main() {
+    setlocale(LC_ALL, "ru");
+    printf("Введите 5 чисел для введения в 3 степень: \n");
+    double a[5];
+    int i;
+    for (i = 0; i < 5; i++) {
+        printf("a[%d] = ", i + 1);
+        cin >> a[i];
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        a[i] = Power(a[i]);
+    }
+    for (int i = 0; i < 5; i++) {
+        printf("%lg ", a[i]);
+    }
+    return 0;
+}
