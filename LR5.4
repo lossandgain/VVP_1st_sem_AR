@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstdlib>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int x1, x2, y1, y2, P, S, a, b;
+	printf("Даны две противоположные вершины прямоугольника. Найти его периметр и площадь.\n");
+
+	printf("Введите координаты 1 вершины: \n");
+	scanf("%d %d", &x1, &x2);
+
+	printf("Введите координаты 2 вершины: \n");
+	scanf("%d %d", &y1, &y2);
+
+	a = abs(x1 - y1);
+	b = abs(x2 - y2);
+
+	P = 2 * (a + b);
+	S = a * b;
+
+	printf("Площадь равна %d, периметр равен %d.\n", S, P);
+	return 0;
+}
