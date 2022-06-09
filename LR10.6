@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int a, b, c;
+    printf("Введите стороны треугольника: ");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if ((a+b > c) && (a+c > b) && (b+c > a))
+    {
+        if ((a*a + b*b == c*c) || (a*a + c*c == b*b) || (c*c + b*b == a*a))
+        {
+            printf("Треугольник прямоугольный.\n");
+        }
+        else
+        {
+            printf("Треугольник обыкновенный.\n");
+        }
+    }
+    else
+    {
+        printf("Треугольник не существует.\n");
+    }
+}
