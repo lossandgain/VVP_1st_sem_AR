@@ -1,0 +1,95 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "ru");
+	string col,  anim;
+	int a, n, g;
+	printf("Введите номер года: ");
+	cin >> a;
+
+	g = a % 60;
+	n = a % 12;
+
+	if (n == 0) {
+		anim = "обезьяны";
+	}
+	else if (n == 1) {
+		anim = "курицы";
+	}
+	else if (n == 2) {
+		anim = "собаки";
+	}
+	else if (n == 3) {
+		anim = "свиньи";
+	}
+	else if (n == 4) {
+		anim = "крысы";
+	}
+	else if (n == 5) {
+		anim = "коровы";
+	}
+	else if (n == 6) {
+		anim = "тигра";
+	}
+	else if (n == 7) {
+		anim = "зайца";
+	}
+	else if (n == 8) {
+		anim = "дракона";
+	}
+	else if (n == 9) {
+		anim = "змеи";
+	}
+	else if (n == 10) {
+		anim = "лошади";
+	}
+	else if (n == 11) {
+		anim = "овцы";
+	}
+
+	if ((g % 10 == 4) || (g % 10 == 5)) {
+		if ((anim == "зайца") || (anim == "тигра") || (anim == "дракона")) {
+			col = "зелёного";
+		}
+		else {
+			col = "зелёной";
+		}
+	}
+	else if ((g % 10 == 6) || (g % 10 == 7)) {
+		if ((anim == "зайца") || (anim == "тигра") || (anim == "дракона")) {
+			col = "красного";
+		}
+		else {
+			col = "красной";
+		}
+	}
+	else if ((g % 10 == 8) || (g % 10 == 9)) {
+		if ((anim == "зайца") || (anim == "тигра") || (anim == "дракона")) {
+			col = "жёлтого";
+		}
+		else {
+			col = "жёлтой";
+		}
+	}
+	else if ((g % 10 == 0) || (g % 10 == 1)) {
+		if ((anim == "зайца") || (anim == "тигра") || (anim == "дракона")) {
+			col = "белого";
+		}
+		else {
+			col = "белой";
+		}
+	}
+	else if ((g % 10 == 2) || (g % 10 == 3)) {
+		if ((anim == "зайца") || (anim == "тигра") || (anim == "дракона")) {
+			col = "чёрного";
+		}
+		else {
+			col = "чёрной";
+		}
+	}
+	cout << a<< endl;
+	printf(" - год ");
+	cout << col << " " << anim << endl;
+}
