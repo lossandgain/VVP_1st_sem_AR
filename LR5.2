@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    float x1, x2, x3;
+    printf("Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму.\n");
+    
+    printf("Введите координаты точки A.\n");
+    scanf("%f", &x1);
+    printf("Введите координаты точки B.\n");
+    scanf("%f", &x2);
+    printf("Введите координаты точки C.\n");
+    scanf("%f", &x3);
+    
+    float ac, bc, a1, a2, s;
+    
+    a1 = pow((x3 - x1),2);
+    a2 = pow((x3 - x2),2);
+    ac = sqrt(a1);
+    bc = sqrt(a2);
+    
+    s = ac + bc;
+    
+    printf("Отрезок АC = %f, отрезок ВС = %.2f.\n", ac, bc);
+    printf("Сумма отрезков АС и ВС равна %.2f.\n", s);
+    return 0;
+}
