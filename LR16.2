@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    const int N = 10;
+    int a[N];
+    if (N > 1)
+    {
+        int A, D;
+        printf("Введите первый член A и знаменатель геом. прог. D: ");
+        cin >> A >> D;
+        for (int i = 0; i < N; i++)
+        {
+            a[i] = A;
+            A *= D;
+            printf("%d\t", a[i]);
+        }
+    }
+    else printf("error");
+    return 0;
+}
+
