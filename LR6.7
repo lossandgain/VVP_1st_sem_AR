@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, b, c;
+    
+    //две вспомогательные переменные и пять операций умножения.
+    
+    printf("Найдём значение выражения A^15.\n");
+    printf("Введите А: ");
+    scanf("%d", &a);
+    
+    b = a * a; //2
+    c = a * b; //3
+    b = b * c; //5
+    c = b * b; //10
+    b = b * c; //15
+    
+    
+    printf("Ответ: %d", b);
+    return 0;
+}
