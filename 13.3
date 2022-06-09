@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int n, sum, count;
+    printf("Введите число N > 0. Возведём его в квадрат. N = ");
+    cin >> n;
+    count = 1;
+    sum = 0;
+    if (n > 0) {
+        while (sum != pow(n, 2)) {
+            sum += count;
+            if (sum != pow(n, 2)) {
+                printf(" = %d\n", sum);
+            }
+            count += 2;
+        }
+        printf("Квадрат числа %d равен %d", n, sum);
+    }
+    else
+        printf("Введите число.\n");
+}
