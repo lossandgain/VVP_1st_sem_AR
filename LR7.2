@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main()
+{
+    float pi = 3.14, rad, gr;
+    setlocale(LC_ALL, "Rus");
+    printf("Введите угол в радианах. Переведём его в градусы.\n");
+    printf("Угол в радианах: ");
+    scanf("%f", &rad);
+    
+    gr = rad * 180 / pi;
+    
+    printf("%f радианов = %f градусов.\n", rad, gr);
+    return 0;
+}
