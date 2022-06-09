@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int A, B, c;
+
+	printf("Даны числа А и В. Поменяем их значения местами.\n");
+	scanf_s("%d %d", &A, &B);
+
+	c = A;
+	A = B;
+	B = c;
+
+	printf("A = %d, B = %d.\n", A, B);
+	return 0;
+}
