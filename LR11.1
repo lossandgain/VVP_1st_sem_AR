@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+   setlocale(LC_ALL, "ru");
+    int a, b, m;
+    printf("Введите два числа А и В: \n");
+    scanf("%d %d", &a, &b);
+    if(a > b)
+    {
+        m = a;
+    }
+    else if(b > a)
+    {
+        m = b;
+    }
+    else if (a == b)
+    {
+        a = 0;
+        b = 0;
+        printf("Изменённые значения А и В: %d %d\n", a, b);
+        return 0;
+    }
+    if (a != b)
+    {
+        a = m;
+        b = a;
+        printf("Изменённые значения А и В: %d %d\n", a, b);
+    }
+}
