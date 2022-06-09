@@ -1,0 +1,38 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+   setlocale(LC_ALL, "ru");
+    float x, y;
+    printf("Введите координаты точки А: \n");
+    scanf("%f %f", &x, &y);
+    if ((x == 0) || (y == 0))
+    {
+        printf("Введены неверные. Введите еще раз.\n");
+        return 0;
+    }
+    else
+    {
+        if ((x > 0) && (y > 0))
+        {
+            printf("Первая четверть.\n");
+            return 0;
+        }
+        else if ((x > 0) && (y < 0))
+        {
+            printf("Червёртая четверть.\n");
+            return 0;
+        }
+        else if ((x < 0) && (y > 0))
+        {
+            printf("Вторая четверть.\n");
+            return 0;
+        }
+        else if ((x < 0) && (y < 0))
+        {
+            printf("Третья четверть.\n");
+            return 0;
+        }
+    }
+}
