@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int A, B;
+    printf("Введите числа А и В для нахождения НОД: ");
+    cin >> A >> B;
+    if ((A > 0) && (B > 0)) {
+        while (A != B) {
+            if (A > B) {
+                A = A - B;
+            }
+            else if (B > A) {
+                B = B - A;
+            }
+        }
+        printf("Наибольший общий делитель равен: %d", A);
+        return 0;
+    }
+    else {
+        printf("Таковых НОД не имеется.");
+        return 0;
+    }
+}
