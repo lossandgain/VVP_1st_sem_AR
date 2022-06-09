@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int g, st, ost;
+    printf("Введите номер года: ");
+    scanf("%d", &g);
+    if (g < 0)
+    {
+        printf("Введите номер года");
+    }
+    else
+    {
+        printf("Вы в %d году.\n", g);
+        st = g / 100;
+        ost = g % 100;
+        if (ost > 0)
+        {
+            printf("Это %d столетие.\n", st + 1);
+        }
+        else
+        {
+            printf("Это %d столетие.\n", st);
+        }
+    }
+    return 0;
+}
