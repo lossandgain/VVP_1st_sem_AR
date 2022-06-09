@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int a, r;
+    
+    //вспомогательную переменную и три операции умножения.
+    
+    printf("Найдём значение выражения A^8.\n");
+    printf("Введите А: ");
+    scanf("%d", &a);
+    
+    r = a * a;
+    r = r * r;
+    r = r * r;
+    
+    printf("Ответ: %d", r);
+    return 0;
+}
