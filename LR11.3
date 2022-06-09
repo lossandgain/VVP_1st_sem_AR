@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cmath>
+
+int main()
+{
+   setlocale(LC_ALL, "ru");
+    float x1, x2, x3, y1, y2, y3, s1, s2;
+    printf("Введите координаты точек А, В и С.\n");
+    printf("Точка А: \n");
+    scanf("%f %f", &x1, &y1);
+    printf("Точка B: \n");
+    scanf("%f %f", &x2, &y2);
+    printf("Точка C: \n");
+    scanf("%f %f", &x3, &y3);
+    s1 = sqrt(pow((x2 - x1),2) + pow((y2 - y1), 2)); //AB
+    s2 = sqrt(pow((x3 - x1),2) + pow((y3 - y1), 2)); //AC
+    if (s1 < s2)
+    {
+        printf("Точка В ближе к А, расстояение АВ = %g", s1);
+    }
+    else if (s1 > s2)
+    {
+        printf("Точка C ближе к А, расстояение АC = %g", s2);
+    }
+}
